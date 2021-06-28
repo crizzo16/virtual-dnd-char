@@ -1,0 +1,21 @@
+[{
+        "charName": "Chell",
+        "id": 1,
+        "class": "Rogue",
+        "subclass": "Jumper",
+        "background": "Low-worlder",
+        "race": "Near-Human (Roguan)",
+        "abilityScores": [8, 16, 15, 12, 14, 10],
+        "savingThrows": [-1, 5, 2, 3, 2, 0]
+    },
+    {
+        "charName": "Corby Jayne",
+        "id": 2,
+        "class": "Warlock",
+        "subclass": "The Star",
+        "background": "Commercial Pilot",
+        "race": "Half-Elf",
+        "abilityScores": [8, 15, 14, 12, 10, 17],
+        "savingThrows": [-1, 2, 2, 1, 2, 5]
+    }
+]
