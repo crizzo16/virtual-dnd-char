@@ -1,21 +1,35 @@
 [{
         "charName": "Chell",
         "id": 1,
+        "level": 3,
+        "proficiencyBonus": 2,
         "class": "Rogue",
         "subclass": "Jumper",
         "background": "Low-worlder",
         "race": "Near-Human (Roguan)",
         "abilityScores": [8, 16, 15, 12, 14, 10],
-        "savingThrows": [-1, 5, 2, 3, 2, 0]
+        "savingThrows": [-1, 5, 2, 3, 2, 0],
+        "skills": [5,2,1,-1,1,0,1,2,0,3,2,1,6,0,2,3,1,3,7,4,1],
+        "speed": 30,
+        "initiative": 3,
+        "size": "Medium",
+        "maxHP": 24
     },
     {
         "charName": "Corby Jayne",
         "id": 2,
+        "level": 3,
+        "proficiencyBonus": 2,
         "class": "Warlock",
         "subclass": "The Star",
         "background": "Commercial Pilot",
         "race": "Half-Elf",
         "abilityScores": [8, 15, 14, 12, 10, 17],
-        "savingThrows": [-1, 2, 2, 1, 2, 5]
+        "savingThrows": [-1, 2, 2, 1, 2, 5],
+        "skills": [3,0,1,-1,1,5,1,0,3,3,0,1,2,3,5,4,1,2,2,0,3],
+        "speed": 30,
+        "initiative": 2,
+        "size": "Medium",
+        "maxHP": 24
     }
 ]
