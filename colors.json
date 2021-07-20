@@ -1,0 +1,33 @@
+[
+    {
+        "main": "grey",
+        "mainText": "black",
+        "secondary": "lightgrey",
+        "secondaryText": "black",
+        "third": "peachpuff",
+        "fourth": "lavender"
+    },{
+        "main": "#6807f9",
+        "mainText": "white",
+        "secondary": "#9852f9",
+        "secondaryText": "white",
+        "third": "#c299fc",
+        "fourth": "#ffd739"
+    },
+    {
+        "main": "#fa163f",
+        "mainText": "white",
+        "secondary": "#12cad6",
+        "secondaryText": "white",
+        "third": "#0fabbc",
+        "fourth": "#e4f9ff"
+    },
+    {
+        "main": "#f87d09",
+        "mainText": "white",
+        "secondary": "#f6f6f6",
+        "secondaryText": "darkgrey",
+        "third": "#a7cdcc",
+        "fourth": "#004a55"
+    }
+]
