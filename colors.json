@@ -33,5 +33,14 @@
         "secondaryText": "darkgrey",
         "third": "#a7cdcc",
         "fourth": "#004a55"
+    },
+    {
+        "id": 4,
+        "main": "#486989",
+        "mainText": "white",
+        "secondary": "#9182c4", 
+        "secondaryText": "white",
+        "third": "#d8aed3",
+        "fourth": "#ebd9dd"
     }
 ]
