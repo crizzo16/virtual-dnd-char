@@ -1,8 +1,301 @@
+body {
+    font-size: 16px;
+    font-family: "Open Sans Condensed", sans-serif;
+    background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/andromeda-galaxy-royalty-free-image-1585682435.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
 #ability-scores {
     display: flex;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
 }
 
 .skill {
     display: flex;
+}
+
+.border-box {
+    position: absolute;
+    fill:white;
+    z-index: 4;
+}
+
+.thin-box {
+    border: 2px solid white;
+    width: 50%;
+    height: 50%;
+    z-index: 4;
+    position: absolute;
+}
+
+.thin-box-tiny {
+    border: 2px solid white;
+    width: 25%;
+    height: 25%;
+    z-index: 4;
+    position: absolute;
+}
+
+.bottom-right {
+    right: -5px;
+    bottom: -5px;
+}
+
+.bottom-left {
+    left: -5px;
+    bottom: -5px;
+    border-right: transparent;
+    border-top: transparent;
+}
+
+.top-left {
+    top: -5px;
+    left: -5px;
+    transform: rotate(180deg);
+}
+
+.top-right {
+    top: -5px;
+    right: -5px;
+    border-left: transparent;
+    border-bottom: transparent;
+}
+
+.z-behind {z-index: -1;}
+
+#list-skills {
+    padding: 10px;
+}
+
+.clip-box-tall {
+    clip-path: polygon(5% 0, 100% 0, 100% 98%, 95% 100%, 0 100%, 0 2%);
+}
+
+.clip-box-sm {
+    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+}
+
+/**************** Header Stuff *************/
+.header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Zen Dots', cursive;
+    background: white;
+}
+
+#char-name {
+    font-size: 48px;
+    width: 35%;
+}
+
+#sub-info {
+    font-size: 25px;
+}
+
+
+.pc-button {
+    border: 1px solid grey;
+    background: lightgrey;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px 15px;
+}
+
+.pc-button:hover {
+    background: lightblue !important;
+}
+
+.color-button {
+    width: 10%;
+    border-radius: 5px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.color-button:hover {
+    border: 2px solid white;
+}
+
+.sub-color {
+    width: 25%;
+}
+
+.color-selected {
+    border: 5px solid white;
+}
+
+
+.skill-sec {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    min-width: 200px;
+    align-items: center;
+}
+
+.skill-as {
+    width: 20%;
+    color: navy;
+    font-weight: bold;
+    padding: 2px 5px;
+    border: 1px solid peachpuff;
+}
+
+.skill-bonus {
+    width: 15%;
+    text-align: center;
+}
+
+#saving-throws {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.savingThrow {
+    width: 46%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    margin: 2%;
+}
+
+/******** Ability Scores *************/
+.as-img {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.as-group {
+    width: 80px;
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+}
+
+.as-name {
+    position: relative;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 16px 0 0 0;
+}
+
+.as-mod {
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    bottom: 10px;
+    margin: 0;
+}
+
+.as-score {
+    margin: 0;
+    position: relative;
+    bottom: 11px;
+}
+
+
+.skill-regular {
+    height: 15px;
+    width: 15px;
+    border: 3px solid grey;
+    border-radius: 100%;
+}
+
+.skill-prof {
+    background: grey;
+}
+
+.skill-expert {
+    background: black;
+    border: black;
+}
+
+.test-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.test-box {
+    width: 70px;
+    height: 100px;
+    clip-path: polygon(15% 0%,85% 0%,100% 15%,100% 85%,85% 100%,15% 100%,0% 85%,0% 15%);
+    background: magenta;
+    position: relative;
+}
+
+.sub-test-box {
+    width: 64px;
+    left: 3px;
+    background: white;
+    height: 92px;
+    bottom: 3px;
+    position: absolute;
+    clip-path: polygon(10% 0%,30% 0%,40% 5%,60% 5%,70% 0%,90% 0%,100% 10%,100% 87%,87% 100%,13% 100%,0% 87%,0% 10%);
+
+}
+
+.text-center {text-align: center;}
+
+.test-name {
+    position: relative;
+    top: 8px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+
+/*********** Borders ************/
+.border-blu {
+    border: 1px solid blue;
+}
+
+.border-lime {
+    border: 1px solid lime;
+}
+
+.border-org {
+    border: 1px solid orange;
+}
+
+.border-mag {
+    border: 1px solid magenta;
+}
+
+@media (max-width:1050px) {
+    .header {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    #char-name {
+        display: block;
+        justify-content: center;
+        display: flex;
+    }
+
+    #sub-info {
+        display: block;
+    }
+}
+
+@media (max-width:1400px) {
+    .container {
+        width: 90% !important;
+    }
 }

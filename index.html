@@ -1,70 +1,279 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Dark Matter Character Sheet</title>
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-        <link rel="stylesheet" href="./style.css" />
-    </head>
-    <body>
-        <div class="header">
-            <div>Character Name</div>
-            <div><span id="hd-class">Class</span> / <span>Subclass</span> / <spam>Background</spam></div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div id="ability-scores">
-                    <div id="as-str">
-                        <p>Strength</p>
-                        <p>-1</p>
-                        <p>8</p>
-                    </div>
-                    <div id="as-dex">
-                        <p>Dexterity</p>
-                        <p>+3</p>
-                        <p>16</p>
-                    </div>
-                    <div id="as-con">
-                        <p>Constitution</p>
-                        <p>+2</p>
-                        <p>15</p>
-                    </div>
-                    <div id="as-int">
-                        <p>Intelligence</p>
-                        <p>+1</p>
-                        <p>12</p>
-                    </div>
-                    <div id="as-wis">
-                        <p>Wisdom</p>
-                        <p>+2</p>
-                        <p>14</p>
-                    </div>
-                    <div id="as-cha">
-                        <p>Charisma</p>
-                        <p>0</p>
-                        <p>10</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col"></div>
-                <div class="col">
-                    <div id="skills">
-                        <div id="list-skills">
-                            <div class="skill">
-                                <div class="skill-prof"></div>
-                                <div class="skill-as">Dex</div>
-                                <div class="skill-name">Acrobatics</div>
-                                <div class="skill-bonus">+2</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <head>
+    <title>Dark Matter Character Sheet</title>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="./app.js"></script>
-    </body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div id="char-name">Character Name</div>
+      <div id="sub-info">
+        <span id="hd-race"></span> / <span id="hd-class">Class</span> /
+        <span id="hd-subclass">Subclass</span> /
+        <span id="hd-background">Background</span>
+      </div>
+    </div>
+    <div class="wrapper border-blu">
+      <div class="row">
+        <div id="ability-scores" class="border-mag col s6">
+          <div id="as-str" class="as-group">
+            <img
+              src="https://github.com/crizzo16/virtual-dnd-char/blob/main/assets/Group%202.png?raw=true"
+              class="as-img"
+            />
+            <p class="as-name">Strength</p>
+            <p class="as-mod" id="str-mod">+5</p>
+            <p class="as-score" id="str-as">20</p>
+          </div>
+          <div id="as-dex" class="as-group">
+            <img
+              src="https://github.com/crizzo16/virtual-dnd-char/blob/main/assets/Group%202.png?raw=true"
+              class="as-img"
+            />
+            <p class="as-name">Dexterity</p>
+            <p class="as-mod" id="dex-mod">+3</p>
+            <p class="as-score" id="dex-as">16</p>
+          </div>
+          <div id="as-con" class="as-group">
+            <img
+              src="https://github.com/crizzo16/virtual-dnd-char/blob/main/assets/Group%202.png?raw=true"
+              class="as-img"
+            />
+            <p class="as-name">Constitution</p>
+            <p class="as-mod" id="con-mod">+2</p>
+            <p class="as-score" id="con-as">15</p>
+          </div>
+          <div id="as-int" class="as-group">
+            <img
+              src="https://github.com/crizzo16/virtual-dnd-char/blob/main/assets/Group%202.png?raw=true"
+              class="as-img"
+            />
+            <p class="as-name">Intelligence</p>
+            <p class="as-mod" id="int-mod">+1</p>
+            <p class="as-score" id="int-as">12</p>
+          </div>
+          <div id="as-wis" class="as-group">
+            <img
+              src="https://github.com/crizzo16/virtual-dnd-char/blob/main/assets/Group%202.png?raw=true"
+              class="as-img"
+            />
+            <p class="as-name">Wisdom</p>
+            <p class="as-mod" id="wis-mod">+2</p>
+            <p class="as-score" id="wis-as">14</p>
+          </div>
+          <div id="as-cha" class="as-group">
+            <img
+              src="https://github.com/crizzo16/virtual-dnd-char/blob/main/assets/Group%202.png?raw=true"
+              class="as-img"
+            />
+            <p class="as-name">Charisma</p>
+            <p class="as-mod" id="cha-mod">0</p>
+            <p class="as-score" id="cha-as">10</p>
+          </div>
+        </div>
+        <div id="head-misc" class="col s3 border-lime">
+          <div class="misc-score">
+            <div>Initiative</div>
+            <div id="prof-bonus-num">6</div>
+          </div>
+          <div class="misc-score">
+            <div>Speed</div>
+            <div id="speed-num">12</div>
+          </div>
+        </div>
+        <div id="health" class="col s3 border-org flex">
+          <div style="width: 50%" class="border-mag">
+            <div id="btn-heal">Heal</div>
+            <input id="hp-amt-input" class="heal-input" />
+            <div id="btn-dmg">Damage</div>
+          </div>
+          <div
+            style="width: 50%; text-align: center; align-items: center"
+            class="border-blu"
+          >
+            <span id="current-hp">77</span> / <span id="max-hp">97</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s2">
+          <div style="position: relative">
+            <div class="thin-box-tiny top-right"></div>
+            <div class="thin-box-tiny bottom-left"></div>
+            <img
+              src="./assets/thick-border-svg.svg"
+              class="border-box top-left"
+            />
+            <img
+              src="./assets/thick-border-svg.svg"
+              class="border-box bottom-right"
+            />
+            <div id="saving-throws" class="clip-box-sm"></div>
+          </div>
+        </div>
+        <div class="col s3">
+          <div id="skills" style="position: relative; max-height: 650px">
+            <img
+              src="./assets/thick-border-svg.svg"
+              class="border-box bottom-right"
+            />
+            <img
+              src="./assets/thick-border-svg.svg"
+              class="border-box top-left"
+            />
+            <div class="thin-box top-right"></div>
+            <div class="thin-box bottom-left"></div>
+            <div id="list-skills" class="clip-box-tall">
+              <div class="skill-sec">
+                <div class="skill-prof"></div>
+                <div class="skill-as">Dex</div>
+                <div class="skill-name">Acrobatics</div>
+                <div class="skill-bonus">+2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s7" style="height: 650px">
+          <div
+            style="position: relative; height: 100%"
+            id="big-box-container"
+            class=""
+          >
+            <svg
+              width="102"
+              height="102"
+              viewBox="0 0 102 102"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="bottom-right border-box"
+            >
+              <rect
+                x="102"
+                y="80"
+                width="5"
+                height="75"
+                transform="rotate(-180 102 80)"
+                fill="orange"
+                class="border-color"
+              />
+              <rect
+                width="4.9264"
+                height="31.1342"
+                transform="matrix(-0.707107 -0.707106 0.707107 -0.707106 79.9722 101.995)"
+                fill="lime"
+                class="border-color"
+              />
+              <rect
+                x="80"
+                y="97"
+                width="5"
+                height="75"
+                transform="rotate(90 80 97)"
+                fill="magenta"
+                class="border-color"
+              />
+              <path
+                d="M4.99999 102L4.37114e-07 97L5 97L4.99999 102Z"
+                fill="white"
+                class="border-color"
+              />
+              <path d="M97 0L102 5L97 5L97 0Z" fill="white"
+              class="border-color" />
+            </svg>
+            <img
+              src="./assets/thick-border-svg.svg"
+              class="border-box top-left z-behind"
+            />
+            <div class="thin-box top-right"></div>
+            <div class="thin-box bottom-left"></div>
+            <div
+              style="
+                height: 100%;
+                background: lavender;
+                clip-path: polygon(
+                  3.3% 0,
+                  100% 0,
+                  100% 97.1%,
+                  96.7% 100%,
+                  0 100%,
+                  0 2.9%
+                );
+              "
+            >
+              <ul class="tabs">
+                <li class="tab"><a href="#feat-race">Race Features</a></li>
+                <li class="tab"><a href="#feat-class">Class Features</a></li>
+              </ul>
+
+              <div id="feat-race">Test 1</div>
+              <div id="feat-class">
+                Test 2<br />testing more<br />testing even more
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row border-lime">
+        <div
+          class="col s12"
+          style="display: flex; justify-content: space-around; flex-wrap: wrap"
+          id="pc-buttons"
+        ></div>
+      </div>
+      <div class="row border-blu">
+        <div
+          class="col s12"
+          style="display: flex; justify-content: space-around; flex-wrap: wrap"
+          id="color-buttons"
+        ></div>
+      </div>
+      <div class="row border-lime">
+        <div class="col s6 border-org">
+          <div class="test-wrapper">
+            <div class="test-box">
+              <div class="sub-test-box"></div>
+              <div class="test-name text-center">Strength</div>
+            </div>
+            <div class="test-box">
+              <div class="sub-test-box"></div>
+              <div class="test-name text-center">Dexterity</div>
+            </div>
+            <div class="test-box">
+              <div class="sub-test-box"></div>
+              <div class="test-name text-center">Constitution</div>
+            </div>
+            <div class="test-box">
+              <div class="sub-test-box"></div>
+              <div class="test-name text-center">Intelligence</div>
+            </div>
+            <div class="test-box">
+              <div class="sub-test-box"></div>
+              <div class="test-name text-center">Wisdom</div>
+            </div>
+            <div class="test-box">
+              <div class="sub-test-box"></div>
+              <div class="test-name text-center">Charisma</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
 </html>
